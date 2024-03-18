@@ -13,7 +13,7 @@ from setuptools import setup
 from torch.utils.cpp_extension import CUDAExtension, BuildExtension
 import os
 os.path.dirname(os.path.abspath(__file__))
-
+os.environ["TORCH_CUDA_ARCH_LIST"]= "5.0;6.0;6.1;6.2;7.0;7.5"
 setup(
     name="diff_gaussian_rasterization",
     packages=['diff_gaussian_rasterization'],
